@@ -1,0 +1,182 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+/* Style the header */
+.header {
+    padding: 80px;
+    text-align: center;
+    color: white;
+}
+
+.main{
+    background: linear-gradient(to bottom, cornflowerblue, orange);
+}
+
+div.imgtext#title{
+    background-image: url(title.bmp);
+    width: 929px;
+    height: 716px;
+}
+
+div.overworld{
+    border: 3px ridge grey;
+    background:#eee;
+    font: 22px arial;
+    padding: 1.5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.imgtext {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  div.imgtext span{
+    background: #222;
+    font: 32px sans-serif;
+    color: cornsilk;
+    padding: 1;
+    text-align: center;
+    opacity: 0.9;
+  }
+
+.paragraph{
+    border: 3px ridge orangered;
+    background: #00000094;
+    margin-left: auto;
+    margin-right: auto;
+    font:  22px sans-serif;
+    color:cornsilk;
+    padding-left: 3%;
+    padding-right: 3%;
+    max-width:70%;
+}
+
+.comments{
+    background: #eee;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font:  22px sans-serif;
+    color:#222;
+    padding: 1.5%;
+    max-width:70%;
+}
+
+.screenshots {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .screenshot {
+    text-align: center;
+    flex-basis: 33%;
+    padding: 24px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+  }
+  
+  .screenshot-name {
+    margin: 0;
+    margin-top: 12px;
+    font-weight: 600;
+    font-size: 24px;
+  }
+
+/* Increase the font size of the h1 element */
+.header h1 {
+    font-size: 40px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: purple;
+    position: fixed;  
+    top: 0;  
+    z-index: 100;  
+    width: 100%;  
+}
+
+/* Style the navigation bar links */
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+    float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Column container */
+.row {  
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+/* Main column */
+.main {   
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+    .row {   
+        flex-direction: column;
+    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width:100%;
+    }
+}

@@ -308,4 +308,8 @@ nav a {
 nav a:hover {
   color: var(--clr-primary-5);
 }
+div.sageState{
+  display: inline-flex;
+  text-align: center;
+}
 /*
