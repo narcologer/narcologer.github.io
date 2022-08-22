@@ -20,7 +20,9 @@ body {
 
 div.imgtext#title{
     background-image: url(title.bmp);
-    width: 929px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
     height: 716px;
 }
 
@@ -31,6 +33,10 @@ div.overworld{
     padding: 1.5%;
     margin-left: auto;
     margin-right: auto;
+}
+
+div.overworld img{
+    width: 100%;
 }
 
 div.imgtext {
@@ -61,6 +67,10 @@ div.imgtext {
     padding-left: 3%;
     padding-right: 3%;
     max-width:70%;
+}
+
+.paragraph img{
+    width: 100%;
 }
 
 .comments{
