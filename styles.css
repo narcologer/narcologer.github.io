@@ -69,7 +69,8 @@ Global Styles
 body {
   font-family: var(--ff-secondary);
   background: url("./bg.png");
-  background-size: 100% 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
@@ -161,6 +162,9 @@ main {
   min-height: 100vh;
   display: grid;
   place-items: center;
+}
+div.links{
+  text-align: center;
 }
 .title {
   text-align: center;

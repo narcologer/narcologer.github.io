@@ -18,12 +18,11 @@ body {
     background: linear-gradient(to bottom, cornflowerblue, orange);
 }
 
-div.imgtext#title{
-    background-image: url(title.bmp);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 716px;
+img#title{
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 div.overworld{
@@ -33,10 +32,12 @@ div.overworld{
     padding: 1.5%;
     margin-left: auto;
     margin-right: auto;
+    max-width:70%;
 }
 
 div.overworld img{
-    width: 100%;
+    width: 50%;
+    height: 50%;
 }
 
 div.imgtext {
@@ -69,10 +70,6 @@ div.imgtext {
     max-width:70%;
 }
 
-.paragraph img{
-    width: 100%;
-}
-
 .comments{
     background: #eee;
     margin-left: auto;
@@ -85,17 +82,15 @@ div.imgtext {
 }
 
 .screenshots {
-    display: flex;
+    display:flex;
     flex-wrap: wrap;
-    width: 100%;
+    align-content: space-between;
   }
   
   .screenshot {
     text-align: center;
-    flex-basis: 33%;
-    padding: 24px;
-    box-sizing: border-box;
-    margin-bottom: 30px;
+    position: relative;
+    padding: 1,5%;
   }
   
   .screenshot-name {
@@ -105,16 +100,22 @@ div.imgtext {
     font-size: 24px;
   }
 
+  .screenshot img{
+    width: 100%;
+    height: 224px;
+    object-fit: cover; 
+    padding:2.5%
+  }
+
 /* Increase the font size of the h1 element */
 .header h1 {
     font-size: 40px;
 }
 
 /* Style the top navigation bar */
-.navbar {
+div.navbar {
     overflow: hidden;
     background-color: purple;
-    position: fixed;  
     top: 0;  
     z-index: 100;  
     width: 100%;  
