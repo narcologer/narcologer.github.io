@@ -168,6 +168,20 @@ div.feature img{
     background: #ddd;
 }
 
+.menu-button {
+	display:none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background: #333;
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {
     .row {   
@@ -177,10 +191,23 @@ div.feature img{
 
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
 @media screen and (max-width: 400px) {
+	.navbar{
+		display:none;
+	}
+	
+	.navbar.open{
+		display:block;
+	}
+
     .navbar a {
         float: none;
         width:100%;
     }
+
+    .menu-button{
+      display: block !important;
+    }
+
 }
 .about {
   background: var(--clr-white);

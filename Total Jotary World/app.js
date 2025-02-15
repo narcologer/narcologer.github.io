@@ -63,3 +63,25 @@ window.addEventListener("DOMContentLoaded", function () {
     }
     showPerson(currentItem);
   });
+  
+document.getElementById("menu-toggle").addEventListener("click", function () {
+    const navbar = document.querySelector(".navbar");
+    const isAtTop = window.scrollY === 0;
+    const isOpen = navbar.classList.contains("open");
+
+    if (isOpen) {
+        // Если меню открыто и пользователь наверху, закрываем
+        if (isAtTop) {
+            navbar.classList.remove("open");
+        } else {
+            // Если меню открыто, но пользователь не наверху – просто скроллим
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    } else {
+        // Если меню закрыто, открываем и, если нужно, скроллим наверх
+        navbar.classList.add("open");
+        if (!isAtTop) {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    }
+});
