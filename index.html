@@ -15,13 +15,35 @@
   </head>
   <body>
     <main>
-      <h1>Projects.</h1>
-      <h2>Projects everywhere.</h2>
+      <h1>Greetings.</h1>
+      <h2>My nickname is Narcologer, and these are my projects:</h2>
       <div class="links">
         <a href="Sonic Chaos Quest\index.html"><h2>Sonic Chaos Quest.</h2></a>
         <a href="Total Jotary World\index.html"><h2>Total Jotary World.</h2></a>
         <a href="https://www.youtube.com/channel/UC8f-GeByRv09gj2WaGGkEjg"><h2>Me on youtube.</h2></a>
       </div>
+      <img src="./img1.png" alt="" class="sprite" style="top:12vh; left:10vw;">
+      <img src="./img2.png" alt="" class="sprite" style="top:21vh; left:71vw;">
+      <img src="./img3.png" alt="" class="sprite" style="top:13vh; left:81vw;">
+      <img src="./img4.png" alt="" class="sprite" style="top:20vh; left:18vw;">
     </main>
   </body>
+  <script>
+    const sprites = document.getElementsByClassName('sprite');
+
+    // Добавляем эффект качания при наведении
+    for (let sprite of sprites) {
+        sprite.addEventListener('mouseenter', () => sprite.classList.add('tilt'));
+        sprite.addEventListener('mouseleave', () => sprite.classList.remove('tilt'));
+
+        sprite.addEventListener('touchstart', (e) => {
+          e.preventDefault();  // Отключает стандартные действия, например, зум
+          sprite.classList.add('tilt');
+      });
+
+      sprite.addEventListener('touchend', () => {
+          sprite.classList.remove('tilt');
+      });
+    }
+  </script>
 </html>
